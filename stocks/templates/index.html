@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>Simge Teknik Ticaret Stocks</title>
+</head>
+<body>
+{% for product in products %}
+<div class="w3-container">
+    <div class="w3-card-4" style="width:100%">
+        <div class="w3-row">
+            <div class="w3-third w3-white w3-center" style="width:15%">
+                <img src="{{product.image.url}}" alt="Image" class="w3-center" style="width:100%; max-width: 65px;">
+            </div>
+            <div class="w3-third w3-dark-grey w3-center" style="width:16%">
+                <h1 style="font-size:2vw">{{product.date}}</h1>
+            </div>
+            <div class="w3-third w3-red w3-center" style="width:32%">
+                <h1 style="font-size:2vw">{{product.name}}</h1>
+            </div>
+            <div class="w3-third w3-green w3-center" style="width:18%">
+                <h1 style="font-size:2vw">{{product.iden}}</h1>
+            </div>
+            <div class="w3-third w3-blue w3-center" style="width:9%">
+                <h1 style="font-size:2vw">{{product.price}}</h1>
+            </div>
+            <div class="w3-third w3-yellow w3-center" style="width:10%">
+                <h1 style="font-size:2vw">{{product.currency}}</h1>
+            </div>
+        </div>
+        </div>
+    </div>
+    </div>
+</div>
+{% endfor %}
+</body>
+</html>
