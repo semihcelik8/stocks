@@ -1,1 +1,1 @@
-web gunicorn stocks.wsgi:apllication --log-file -
+web gunicorn stockscheck.wsgi:apllication --log-file -
