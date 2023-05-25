@@ -16,13 +16,6 @@ import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-import environ
-
-
-env = environ.Env()
-
-environ.Env.read_env()
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
@@ -31,9 +24,9 @@ environ.Env.read_env()
 SECRET_KEY = 'django-insecure-cdqc!e=7+z5#&(eyfd+9mve4@7yv1)t!62^kq61mc_&e($52!8'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['vercel.app']
 
 
 # Application definition
@@ -134,9 +127,3 @@ MEDIA_ROOT=os.path.join(BASE_DIR,"media/")
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-import dj_database_url
-
-DATABASES = {
-    'default': dj_database_url.parse('postgres://simgeteknikticaretstocks_user:GnyWgyYufCS0kvzkfVhyuP1x6cd5bdgB@dpg-chn8ce1mbg5577k1uu20-a.oregon-postgres.render.com/simgeteknikticaretstocks')
-}
